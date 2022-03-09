@@ -44,19 +44,23 @@
           <button type="button" onclick="calculatePerimeterTriangle()">
             Calculate the perimeter
           </button>
-          <button type="button" onclick="areaTriangulo()">
+          <label>
+            write what is the height of your triangle to calculate the area
+          </label>
+          <input id="InputHeightTriangle">
+          <button type="button" onclick="calculateAreaTriangle()">
             Calculate the area
           </button>
         </form>
       </section>
 
       <section>
-        <h2>Cicle</h2>
+        <h2>Circle</h2>
         <form>
-          <label for="InputCuadrado">
-            Escribe cuánto mide cada lado de tu cuadrado:
+          <label for="InputRadiusCircle">
+            Escribe cuánto mide el radio de tu circulo:
           </label>
-          <input id="InputCuadrado" type="number" />
+          <input id="InputRadiusCircle" type="number" />
           <button type="button" onclick="calculatePerimeterCircle()">
             Calcular el perímetro
           </button>

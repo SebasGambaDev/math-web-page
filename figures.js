@@ -19,22 +19,22 @@ function areaTriangle(base, height) {
 // Circle code
 
 // Diámetro
-function diametroCirculo(radio) {
-  return radio * 2;
+function diametroCirculo(radius) {
+  return radius * 2;
 }
 
 // PI
 const PI = Math.PI;
 
 // Circunferencia
-function perimetroCirculo(radio) {
-  const diametro = diametroCirculo(radio);
+function perimeterCircle(radius) {
+  const diametro = diametroCirculo(radius);
   return diametro * PI;
 }
 
 // Área
-function areaCirculo(radio) {
-  return (radio * radio) * PI;
+function areaCircle(radius) {
+  return (radius * radius) * PI;
 }
 
 // Aquí interactuamos con el HTML
@@ -72,15 +72,35 @@ function calculatePerimeterTriangle(){
 }
 
 function calculateAreaTriangle(){
-  //TO DO
+  const inputHeight = document.getElementById("InputHeightTriangle");
+  const inputBase = document.getElementById("InputBaseTriangle");
+
+  const height = inputHeight.value;
+  const base = inputBase.value;
+
+  const area = areaTriangle(base, height);
+
+  alert(area)
 }
 
 //Circle Functions
 function calculatePerimeterCircle(){
-  //TO DO
+  const inputRadius = document.getElementById("InputRadiusCircle");
+  
+  const radius = inputRadius.value;
+
+  const perimeter = perimeterCircle(radius);
+
+  alert(perimeter)
+  
 }
 
 function calculateAreaCircle(){
-  //TO DO
+  const inputRadius = document.getElementById("InputRadiusCircle");
+  
+  const radius = inputRadius.value;
 
+  const area = areaCircle(radius);
+
+  alert(area)
 }
