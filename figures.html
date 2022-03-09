@@ -33,42 +33,57 @@
     </section>
 
     <section>
-        <h2>Triangle</h2>
-        <form>
-          <label for="InputCuadrado">
-            Escribe cuánto mide cada lado de tu triangulo:
-          </label>
-          <input id="InputSideTriangle1" type="number" />
-          <input id="InputSideTriangle2" type="number" />
-          <input id="InputBaseTriangle" type="number" />
-          <button type="button" onclick="calculatePerimeterTriangle()">
-            Calculate the perimeter
-          </button>
-          <label>
-            write what is the height of your triangle to calculate the area
-          </label>
-          <input id="InputHeightTriangle">
-          <button type="button" onclick="calculateAreaTriangle()">
-            Calculate the area
-          </button>
-        </form>
-      </section>
+      <h2>Triangle</h2>
+      <form>
+        <label for="InputCuadrado">
+          Escribe cuánto mide cada lado de tu triangulo:
+        </label>
+        <input id="InputSideTriangle1" type="number" />
+        <input id="InputSideTriangle2" type="number" />
+        <input id="InputBaseTriangle" type="number" />
+        <button type="button" onclick="calculatePerimeterTriangle()">
+          Calculate the perimeter
+        </button>
+        <label>
+          write what is the height of your triangle to calculate the area
+        </label>
+        <input id="InputHeightTriangle">
+        <button type="button" onclick="calculateAreaTriangle()">
+          Calculate the area
+        </button>
+      </form>
+    </section>
 
-      <section>
-        <h2>Circle</h2>
-        <form>
-          <label for="InputRadiusCircle">
-            Escribe cuánto mide el radio de tu circulo:
-          </label>
-          <input id="InputRadiusCircle" type="number" />
-          <button type="button" onclick="calculatePerimeterCircle()">
-            Calcular el perímetro
-          </button>
-          <button type="button" onclick="calculateAreaCircle()">
-            Calcular el área
-          </button>
-        </form>
-      </section>
+    <section>
+      <h2>Isoceles triangle</h2>
+      <form>
+        <label for="InputCuadrado">
+          Escribe cuánto mide cada lado de tu triangulo:
+        </label>
+        <input id="InputSideIsocelesTriangle1" type="number" />
+        <input id="InputSideIsocelesTriangle2" type="number" />
+        <input id="InputBaseIsocelesTriangle" type="number" />
+        <button type="button" onclick="calculateHeightIsocelesTriangle()">
+          Calculate the height
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Circle</h2>
+      <form>
+        <label for="InputRadiusCircle">
+          Escribe cuánto mide el radio de tu circulo:
+        </label>
+        <input id="InputRadiusCircle" type="number" />
+        <button type="button" onclick="calculatePerimeterCircle()">
+          Calcular el perímetro
+        </button>
+        <button type="button" onclick="calculateAreaCircle()">
+          Calcular el área
+        </button>
+      </form>
+    </section>
   
     <script src="./figures.js"></script>
   </body>

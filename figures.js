@@ -16,6 +16,28 @@ function areaTriangle(base, height) {
   return (base * height) / 2;
 }
 
+//Isoceles Triangle code
+
+function validateSides(side1, side2){
+  if(side1 == side2){
+    return true;
+  } else{
+    return false;
+  }
+}
+
+function heightIsocelesTriangle(side1, side2, base){
+  const validation = validateSides(side1, side2)
+  if(validation !== true){
+    alert("lo que intentas ingresar no es un triangulo isoceles. la medida de sus lados debe ser la misma")
+  } else{
+    const newBase = (base / 2);
+    const operation = (side1 * side2) - (newBase * newBase);
+    const result = Math.sqrt(operation);
+    return result; 
+  }
+}
+
 // Circle code
 
 // Diámetro
@@ -82,6 +104,23 @@ function calculateAreaTriangle(){
 
   alert(area)
 }
+
+//Isoceles Triangle Functions
+function calculateHeightIsocelesTriangle(){
+  const sideOne = document.getElementById("InputSideIsocelesTriangle1");
+  const sideTwo = document.getElementById("InputSideIsocelesTriangle2");
+  const inputBase = document.getElementById("InputBaseIsocelesTriangle");
+
+  const side1 = sideOne.value;
+  const side2 = sideTwo.value;
+  const base = inputBase.value;
+  
+  const height = heightIsocelesTriangle(side1, side2, base);
+
+  alert(height)
+
+}
+
 
 //Circle Functions
 function calculatePerimeterCircle(){
