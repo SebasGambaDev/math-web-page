@@ -61,21 +61,70 @@ function areaCircle(radius) {
 
 // Aquí interactuamos con el HTML
 
+
+function comprueba(valor){
+  const warning = document.getElementById("WarningSquare");
+  const input = document.getElementById("InputSquare");
+
+  if(valor.value <= 0){
+    warning.classList.add("warning-square_show");
+    input.classList.add("warning-square_input")
+    valor.value = "";
+  } else{
+    input.classList.remove("warning-square_input")
+    warning.classList.remove("warning-square_show");
+  }
+}
+
 //Square functions
+
+function changeMathOperation(){
+  const checkSquare = document.getElementById("InputCheckArea");
+  const button = document.getElementById("BtncalculateSquare");
+
+  if(checkSquare.checked){
+    button.setAttribute("onclick", "calculateAreaSquare()");
+  }
+  else {
+    button.setAttribute("onclick", "calculatePerimeterSquare()");
+  } 
+}
+  
 function calculatePerimeterSquare() {
   const input = document.getElementById("InputSquare");
+  const warning = document.getElementById("WarningSquare");
+  const result = document.getElementById("ResultSquare");
   const value = input.value;
 
-  const perimetro = perimeterSquare(value);
-  alert(perimetro);
+  if(value <= 0) {
+    warning.classList.add("warning-square_show")
+    input.classList.add("warning-square_input")
+  }
+  else{
+    warning.classList.remove("warning-square_show")
+    input.classList.remove("warning-square_input")
+    const perimeter = perimeterSquare(value);
+
+    result.innerText = "The perimeter of square is " + perimeter + " Cms."
+  }
 }
 
 function calculateAreaSquare() {
   const input = document.getElementById("InputSquare");
+  const warning = document.getElementById("WarningSquare");
+  const result = document.getElementById("ResultSquare");
   const value = input.value;
 
-  const area = areaA(value);
-  alert(area);
+  if(value <= 0) {
+    warning.classList.add("warning-square_show")
+    input.classList.add("warning-square_input")
+  }
+  else{
+    warning.classList.remove("warning-square_show")
+    input.classList.remove("warning-square_input")
+    const area = areaSquare(value);
+    result.innerText = "The area of square is " + area + "Cms."
+  }
 }
 
 //Triangle Functions
