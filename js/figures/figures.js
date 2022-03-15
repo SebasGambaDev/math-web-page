@@ -78,7 +78,7 @@ function comprueba(valor){
 
 //Square functions
 
-function changeMathOperation(){
+function changeMathOperationSquare(){
   const checkSquare = document.getElementById("InputCheckArea");
   const button = document.getElementById("BtncalculateSquare");
 
@@ -123,11 +123,24 @@ function calculateAreaSquare() {
     warning.classList.remove("warning-square_show")
     input.classList.remove("warning-square_input")
     const area = areaSquare(value);
-    result.innerText = "The area of square is " + area + "Cms."
+    result.innerText = "The area of square is " + area + " Cms."
   }
 }
 
 //Triangle Functions
+
+function changeMathOperationTriangle(){
+  const checkSquare = document.getElementById("InputSelect");
+  const button = document.getElementById("BtncalculateSquare");
+
+  if(checkSquare.checked){
+    button.setAttribute("onclick", "calculateAreaSquare()");
+  }
+  else {
+    button.setAttribute("onclick", "calculatePerimeterSquare()");
+  } 
+}
+
 function calculatePerimeterTriangle(){
   const input1 = document.getElementById("InputSideTriangle1");
   const input2 = document.getElementById("InputSideTriangle2");

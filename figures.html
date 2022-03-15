@@ -7,139 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./sass/sas.css" type="text/css" >
   <!--Fontawesome-->
   <script src="https://kit.fontawesome.com/51c619980c.js" crossorigin="anonymous"></script>
   <!--Title-->
   <title>Geometric figures</title>
-  <style>
-    :root {
-      --black: #212121;
-      --grey: #EEEEEE;
-      --teal: #32E0C4;
-      --surfie-green:#0D7377;
-      --white: #ffffff
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--teal);
-    }
-
-    h1{
-      text-align: center;
-      padding: 2rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .card-square{
-      background-color: var(--grey);
-      width: 30%;
-      border-radius: 10px;
-      padding: 10px;
-    }
-
-    .card-square h2{
-      text-align: center;
-      font-size: 18px;
-    }
-
-    .form-square {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-square_text {
-      margin: 0 0 10px 0;
-      font-size: 14px;
-      font-weight: 300;
-    }
-
-    .square-check {
-      margin-bottom: 10px;
-    }
-
-    .square-check_input{
-      margin: 0;
-    }
-
-    .square-check_label {
-      margin: 0;
-      font-weight: 500;
-      font-size: 16px;
-      padding: 0 0 0 5px;
-    }
-
-    .form-square_group {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-    }
-
-    .form-square_label{
-      font-size: 14px;
-      font-weight: 300;
-      margin-bottom: 10px;
-    }
-
-    .form-square_input{
-      margin: 0;
-      height: 30px;
-      border: none;
-      border-radius: 5px;
-      text-align: center;
-      outline: none;
-    }
-
-    .form-square button{
-      height: 35px;
-      border: 1px solid black;
-      border-radius: 5px;
-    }
-
-    .form-square button:hover {
-      cursor: pointer;
-      background-color: var(--black);
-      color: var(--white);
-    }
-
-    .warning-square {
-      color: red;
-      font-size: 12px;
-      font-weight: 300;
-      margin: 0;
-      display: none;
-    }
-
-    .warning-square_show {
-      display: block;
-    } 
-    .warning-square_input {
-      border: 1px solid red;
-    }
-
-    .form-square_result {
-      font-size: 18px;
-      font-weight: 700;
-      text-align: center;
-      padding-top: 10px;
-      color: var(--surfie-green);
-      margin: 0;
-    }
-
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    }
-  
-  </style>
 </head>
 <body>
     <header>
@@ -149,56 +21,75 @@
     </header>
 
     <div class="container">
-      <section class="card-square">
+      <section class="square">
         <h2>Square</h2>
-        <form class="form-square">
-          <p class="form-square_text">By default the perimeter of a square will be calculated, if you want to calculate the area of ​​a square select the following checkbox.</p>
-          <div class="square-check">
-            <input class="square-check_input" type="checkbox" id="InputCheckArea" onclick="changeMathOperation()">
-            <label class="square-check_label" for="InputCheckArea">
+        <p>By default the perimeter of a square will be calculated, if you want to calculate the area of ​​a square select the following checkbox.</p>
+        <form class="square-form">
+          <div class="form-check">
+            <input class="" type="checkbox" id="InputCheckArea" onclick="changeMathOperationSquare()">
+            <label class="" for="InputCheckArea">
               Calculate the area
             </label>
           </div>
-
-          <div class="form-square_group">
-            <label class="form-square_label" for="InputSquare">
+          <div class="form-group">
+            <label class="" for="InputSquare">
               Write how long each side of your square is:
             </label>
-            <input class="form-square_input" id="InputSquare" type="number" step="any" onkeyup="comprueba(this)" placeholder="The measure of your square in Cms."/>
-            <div class="warning-square" id="WarningSquare">
+            <input class="" id="InputSquare" type="number" step="any" onkeyup="comprueba(this)" placeholder="The measure of your square in Cms."/>
+            <div class="form-group_warnings" id="WarningSquare">
               * Enter a number valid, please.
             </div>
           </div>
           <button type="button" id="BtncalculateSquare" onclick="calculatePerimeterSquare()">
             Calculate
           </button>
-          <p class="form-square_result" id="ResultSquare"></p>
+          <p class="" id="ResultSquare"></p>
         </form>
       </section>
   
-     <!--  <section class="card">
+     <section class="triangle">
         <h2>Triangle</h2>
-        <form>
-          <label for="InputCuadrado">
-            Escribe cuánto mide cada lado de tu triangulo:
-          </label>
-          <input id="InputSideTriangle1" type="number" />
-          <input id="InputSideTriangle2" type="number" />
-          <input id="InputBaseTriangle" type="number" />
-          <button type="button" onclick="calculatePerimeterTriangle()">
-            Calculate the perimeter
+        <form class="">
+          <p class="">Choose the calculation you want to do on your triangle</p>
+          <select class="triangle-select" id="InputSelect">
+            <option>Perimeter of a triangle</option>
+            <option>Area of a triangle</option>
+            <option>Height of an isosceles triangle</option>
+          </select>
+          <p>Write how long each side of your triangle is:</p>
+          <div class="form-group">
+            <input class="" id="InputSideTriangle1" type="number" placeholder="Side One in Cms."/>
+            <div class="form-group_warnings" id="WarningSquare">
+              * Enter a number valid, please.
+            </div>
+          </div>
+          <div class="form-group">
+            <input class="" id="InputSideTriangle2" type="number" placeholder="Side Two in Cms."/>
+            <div class="form-group_warnings" id="WarningSquare">
+              * Enter a number valid, please.
+            </div>
+          </div>
+          <div class="form-group">
+            <input class="" id="InputHeightTriangle" type="number" placeholder="Height of the triangle in Cms."/>
+            <div class="form-group_warnings" id="WarningSquare">
+              * Enter a number valid, please.
+            </div>
+          </div>
+          <div class="form-group">
+            <input class="" id="InputBaseTriangle" type="number" placeholder="Base of the triangle in Cms."/>
+            <div class="form-group_warnings" id="WarningSquare">
+              * Enter a number valid, please.
+            </div>
+          </div>
+          
+          <button class="" type="button" id="BtncalculateSquare" onclick="calculatePerimeterTriangle()">
+            Calculate
           </button>
-          <label>
-            write what is the height of your triangle to calculate the area
-          </label>
-          <input id="InputHeightTriangle">
-          <button type="button" onclick="calculateAreaTriangle()">
-            Calculate the area
-          </button>
+          
         </form>
       </section>
-  
-      <section class="card">
+  <!--
+      <section class="card-triangle">
         <h2>Isoceles triangle</h2>
         <form>
           <label for="InputCuadrado">
@@ -212,8 +103,8 @@
           </button>
         </form>
       </section>
-  
-      <section class="card">
+    -->
+      <section class="circle">
         <h2>Circle</h2>
         <form>
           <label for="InputRadiusCircle">
@@ -227,14 +118,9 @@
             Calcular el área
           </button>
         </form>
-      </section>  -->
+      </section> 
     </div>
   
     <script src="./figures.js"></script>
-    <script>
-      
-      
-
-    </script>
   </body>
 </html>

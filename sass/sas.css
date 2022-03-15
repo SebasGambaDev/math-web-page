@@ -1,0 +1,303 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #32E0C4;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.square, .triangle, .circle {
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #EEEEEE;
+}
+
+.square h2, .triangle h2, .circle h2 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.square p, .triangle p, .circle p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.square-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.square-form button {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #212121;
+}
+
+.square-form button:hover {
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.form-check input {
+  margin: 0;
+}
+
+.form-check label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 0 0 5px;
+}
+
+.form-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  margin: 0;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+.form-group_warnings {
+  color: red;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  display: none;
+}
+
+.triangle-select {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.triangle form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triangle form button {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #212121;
+}
+
+.triangle form button:hover {
+  cursor: pointer;
+  background-color: #212121;
+  color: #ffffff;
+}
+
+/*
+
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--teal);
+}
+
+h1{
+  text-align: center;
+  padding: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-square{
+  background-color: var(--grey);
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-square h2{
+  text-align: center;
+  font-size: 18px;
+}
+
+.form-square {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-square_text {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 300;
+  
+}
+
+.square-check {
+  margin-bottom: 10px;
+}
+
+.square-check_input{
+  margin: 0;
+}
+
+.square-check_label {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 0 0 5px;
+}
+
+.form-square_group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-square_label{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.form-square_input{
+  margin: 0;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+.form-square button{
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.form-square button:hover {
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.warning-square {
+  color: red;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  display: none;
+}
+
+.warning-square_show {
+  display: block;
+} 
+.warning-square_input {
+  border: 1px solid red;
+}
+
+.form-square_result {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+  color: var(--surfie-green);
+  margin: 0;
+}
+
+.card-triangle{
+  background-color: var(--grey);
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.show {
+  display: block;
+}
+
+.form-select{
+  margin: 0;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+
+.margin-b10{
+  margin-bottom: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}*/
+/*# sourceMappingURL=sas.css.map */
